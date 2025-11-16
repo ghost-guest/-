@@ -1,0 +1,11 @@
+# 这是YAML注释
+
+# 基本数据类型
+name: "Pansou项目"
+version: 1.0.0
+enabled: true
+
+# 小云搜索的配置信息
+xyss_api_id: "10602"
+xyss_api_key: "4ac23e6eb211f452e045819c32c9f990bcec4230ef87e990989cbb330dbea8ec"
+xyss_api_url: "https://www.yunso.net/api/opensearch.php"
