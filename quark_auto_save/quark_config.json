@@ -1,0 +1,192 @@
+{
+  "cookie": [
+ "b-user-id=b8b506c3-4fa0-ed94-409f-1492f063485c; _UP_A4A_11_=wb9c51b2f93a46f0ac2811936ffd2df3; _qk_bx_ck_v1=eyJkZXZpY2VJZCI6ImVDeSNBQU9BRndpb25nYkVxVXROdDJEZ042ZlhsdDJHQWVnYkhrVVQvd2hoRnNwUHRnVTc2cDhiaXJPOHJJWjRPMDU4U2pvPSIsImRldmljZUZpbmdlcnByaW50IjoiODk5YzY0ODMwYjhmMzJkNzY4NmUyZjc3ZGVkYTA0M2QifQ==; xlly_s=1; __sdid=AASVrILjaF0RRbVQMjVWov41mUvzgrsG9yV11SAhWZeZz9yo0/M9ddEtDfp8m46Vvcw=; _UP_D_=pc; __pus=7ee94bc70b09ae41e921f1fb6ddf9075AASAQa3Nh1LEqD0XV3kjijVkBmpubVsWzIygoqXI0IXPxj6V+meEm9DZn7v3mthjDe00DO/Dr9L1zQpbgC+MLAHm; __kp=4c161f20-c1cd-11f0-b1e3-9bb6589f2397; __kps=AAQ+P17OEjoAr3oTDR63MtRf; __ktd=HiMFQILLJ+WvHyviIevXsw==; __uid=AAQ+P17OEjoAr3oTDR63MtRf; isg=BKWlhuCZILP63EpvcDeuNfzYtGff4ll0mmooiaeKtVzrvsQwbzKPRM0dTCLIvnEs; tfstk=gBSic-aKFBG56pisS-x_SufAcO4L1htXOsnvMnd48BRBMR6A3noVMtK9u56AtIRFGR_v_riDo_vy3-i4s62c6tiv_CIvmE5JbE_9MCdDmt1up7E82O66chP8wuLEwZjXVKow0jLEYLtDQurIjiW6cnPKpmz8qO19P9Hk0nyHYKvXgn8w02yHBLtqbEoZ8XRB3n-q0cle8KvmgcRVg9yHhBR20n52YJvXTI-20f6Z7CsVXMPb8MJegaglYdYMaORNBOIEtFu1IBmq0CbHYQrDtmoVxdXLheOqbuAFWZS9YGPENHW5J1JHqoDDKaXebdfbVctNU972Si4xFI_hLaLhRAe6KGXlmLYETRAfX1jD5gP-AC7hAixOJ5mJGE7dfUsTTcxPPOKOu6yq0Ibe3grt84rQam9UHMujlFJBKQEPQbUvOs3w-J2nzxTwddR8KJ0f-FJBKQe3K4xM7p9ww; __puus=6020450e1ba49ffe7d0b1a35533c1769AAR5SaGLwvH8MSIeBIEpXdL3c2lEYMF3rmsp19WfxrOrapmM8tkPqmqcP0km313Sg/H71ncS/T9uFSI0p4UBPEkHKScEmDaROblXJRKEp7XPLDrJdKPcTS+Gk9UhPsSvl+WZQFsWdYuNJ9ZfaIS0gvS+xmcmVeQov6ksjEQHuMsSyQsPvZHL3nhhspRHBUAJMEtbuwZJj845qpdg71AmY+Np"
+  ],
+  "push_config": {
+    "QUARK_SIGN_NOTIFY": true,
+    "其他推送渠道//此项可删": "配置方法同青龙"
+  },
+  "plugins": {
+    "emby": {
+      "url": "",
+      "token": ""
+    },
+    "alist": {
+      "url": "",
+      "token": "",
+      "storage_id": ""
+    },
+    "smartstrm": {
+      "webhook": "",
+      "strmtask": "",
+      "xlist_path_fix": ""
+    },
+    "alist_strm": {
+      "url": "",
+      "cookie": "",
+      "config_id": ""
+    },
+    "alist_strm_gen": {
+      "url": "",
+      "token": "",
+      "storage_id": "",
+      "strm_save_dir": "/media",
+      "strm_replace_host": ""
+    },
+    "alist_sync": {
+      "url": "",
+      "token": "",
+      "quark_storage_id": "",
+      "save_storage_id": "",
+      "tv_mode": ""
+    },
+    "aria2": {
+      "host_port": "172.17.0.1:6800",
+      "secret": "",
+      "dir": "/Downloads"
+    },
+    "plex": {
+      "url": "",
+      "token": "",
+      "quark_root_path": ""
+    },
+    "fnv": {
+      "base_url": "http://10.0.0.6:5666",
+      "app_name": "trimemedia-web",
+      "username": "",
+      "password": "",
+      "secret_string": "",
+      "api_key": "",
+      "token": null
+    }
+  },
+  "magic_regex": {
+    "$TV_REGEX": {
+      "pattern": ".*?([Ss]\\d{1,2})?(?:[第EePpXx\\.\\-\\_\\( ]{1,2}|^)(\\d{1,3})(?!\\d).*?\\.(mp4|mkv)",
+      "replace": "\\1E\\2.\\3"
+    },
+    "$BLACK_WORD": {
+      "pattern": "^(?!.*纯享)(?!.*加更)(?!.*超前企划)(?!.*训练室)(?!.*蒸蒸日上).*",
+      "replace": ""
+    },
+    "$SHOW_MAGIC": {
+      "pattern": "^(?!.*纯享)(?!.*加更)(?!.*抢先)(?!.*预告).*?第\\d+期.*",
+      "replace": "{TASKNAME}.{SXX}E{II}.第{E}期{PART}.{EXT}"
+    },
+    "$TV_MAGIC": {
+      "pattern": "",
+      "replace": "{TASKNAME}.{SXX}E{E}.{EXT}"
+    }
+  },
+  "tasklist": [
+    {
+      "taskname": "测试-魔法匹配剧集（这是一组有效分享，配置CK后可测试任务是否正常）",
+      "shareurl": "https://pan.quark.cn/s/d07a34a9c695#/list/share/7e25ddd87cf64443b637125478733295-夸克自动转存测试",
+      "savepath": "/夸克自动转存测试/剧集",
+      "pattern": "$TV_REGEX",
+      "replace": "",
+      "enddate": "2099-01-30",
+      "update_subdir": "4k|1080p",
+      "addition": {
+        "alist_strm_gen": {
+          "auto_gen": true
+        },
+        "alist_sync": {
+          "enable": false,
+          "save_path": "",
+          "verify_path": "",
+          "full_path_mode": false
+        },
+        "aria2": {
+          "auto_download": false,
+          "pause": false
+        },
+        "emby": {
+          "try_match": true,
+          "media_id": ""
+        },
+        "fnv": {
+          "auto_refresh": false,
+          "mdb_name": "",
+          "mdb_dir_list": ""
+        }
+      }
+    },
+    {
+      "taskname": "测试-综艺命名",
+      "shareurl": "https://pan.quark.cn/s/d07a34a9c695#/list/share/7e25ddd87cf64443b637125478733295-%E5%A4%B8%E5%85%8B%E8%87%AA%E5%8A%A8%E8%BD%AC%E5%AD%98%E6%B5%8B%E8%AF%95/71df3902f42d4270a58c0eb12aa2b014-%E7%BB%BC%E8%89%BA%E5%91%BD%E5%90%8D",
+      "savepath": "/夸克自动转存测试/综艺命名",
+      "pattern": "^(?!.*纯享)(?!.*加更)(?!.*抢先)(?!.*预告).*?第\\d+期.*",
+      "replace": "{II}.{TASKNAME}.{DATE}.第{E}期{PART}.{EXT}",
+      "addition": {
+        "alist_strm_gen": {
+          "auto_gen": true
+        },
+        "alist_sync": {
+          "enable": false,
+          "save_path": "",
+          "verify_path": "",
+          "full_path_mode": false
+        },
+        "aria2": {
+          "auto_download": false,
+          "pause": false
+        },
+        "emby": {
+          "try_match": true,
+          "media_id": ""
+        },
+        "fnv": {
+          "auto_refresh": false,
+          "mdb_name": "",
+          "mdb_dir_list": ""
+        }
+      }
+    },
+    {
+      "taskname": "测试-去广告字符",
+      "shareurl": "https://pan.quark.cn/s/d07a34a9c695#/list/share/7e25ddd87cf64443b637125478733295-夸克自动转存测试/680d91e490814da0927c38b432f88edc-带广告文件夹",
+      "savepath": "/夸克自动转存测试/去广告字符",
+      "pattern": "【XX电影网】(.*)\\.(mp4|mkv)",
+      "replace": "\\1.\\2",
+      "enddate": "2099-01-30",
+      "addition": {
+        "alist_strm_gen": {
+          "auto_gen": true
+        },
+        "alist_sync": {
+          "enable": false,
+          "save_path": "",
+          "verify_path": "",
+          "full_path_mode": false
+        },
+        "aria2": {
+          "auto_download": false,
+          "pause": false
+        },
+        "emby": {
+          "try_match": true,
+          "media_id": ""
+        },
+        "fnv": {
+          "auto_refresh": false,
+          "mdb_name": "",
+          "mdb_dir_list": ""
+        }
+      }
+    },
+    {
+      "taskname": "测试-超期任务",
+      "shareurl": "https://pan.quark.cn/s/d07a34a9c695#/list/share/7e25ddd87cf64443b637125478733295-夸克自动转存测试",
+      "savepath": "/夸克自动转存测试/不会运行",
+      "pattern": "",
+      "replace": "",
+      "enddate": "2000-01-30",
+      "runweek": [
+        2,
+        4,
+        6
+      ]
+    }
+  ]
+}
